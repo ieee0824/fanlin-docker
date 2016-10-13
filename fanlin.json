@@ -1,0 +1,10 @@
+{
+    "port": 8080,
+    "max_width": 1000,
+    "max_height": 1000,
+    "access_log_path": "/dev/stderr",
+    "error_log_path": "/dev/stderr",
+    "debug_log_path": "/dev/stderr",
+    "providers": [
+    ]
+}
