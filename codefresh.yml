@@ -6,7 +6,5 @@ steps:
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
-            - echo "which git"
-            - which git
-            - echo "which go"
-            - which go
+            - git clone https://github.com/wfarr/goenv.git ~/.goenv
+            - ls -a
