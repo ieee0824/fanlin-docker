@@ -6,4 +6,4 @@ steps:
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
-            - ls
+            - go version
