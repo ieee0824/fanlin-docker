@@ -1,42 +1,10 @@
 version: '1.0'
 
+version: "1.0"
 steps:
-  clone-jim:
-    type: git-clone
-    repo: github.com/codefresh/jim
-    credentials:
-      username: ${{username}}
-      password: ${{password}}
-
-  unit-test-jim:
-    image: go:onbuild
-    working-directory: ${{clone-jim}}
-    commands: 
-      - go test
-
-  build-jim:
-    type: build
-    description: It builds the Jim Service
-    dockerfile: Dockerfile
-    image-name: codefresh/jim
-    tag: develop
-    working-directory: ${{clone-jim}}
-    environment:
-      - PORT=9000
-    build-arguments:
-      - key=value
-
-  push-dockerhub:
-    type: push
-    candidate: ${{build-jim}}
-    tag: latest
-    credentials:
-      username: ${{username}}
-      password: ${{password}}
-    fail-fast: false
-
-  deploy-jim:
-    image: tutum/curl:latest
-    commands:
-      - curl http://webhook.io
-    description: codefresh example
+    unit-tests:
+        image: verchol/node-tools:all
+        fail-fast: false
+        working-directory : ${{initial-clone}}
+        commands:
+            - ls
