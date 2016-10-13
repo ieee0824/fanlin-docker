@@ -1,4 +1,4 @@
-version: '1.0'
+version: '0.0'
 
 steps:
     unit-tests:
@@ -6,6 +6,6 @@ steps:
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
-            - git clone https://github.com/wfarr/goenv.git ~/.goenv
+            - git clone https://github.com/wfarr/goenv.git $(pwd)/.goenv
             - ls -a
             - pwd
