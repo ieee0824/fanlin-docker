@@ -6,4 +6,7 @@ steps:
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
-            - go version
+            - echo "which git"
+            - which git
+            - echo "which go"
+            - which go
