@@ -1,5 +1,6 @@
 version: '1.0'
-steps:
-    build-test:
-        commands:
-            - ls
+staps:
+    build-fanlin:
+        type: build
+         commands:
+             - ls
