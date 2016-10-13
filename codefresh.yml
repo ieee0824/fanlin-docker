@@ -1,5 +1,2 @@
 version: '1.0'
 steps:
-    build-fanlin:
-        commands:
-             - ls
