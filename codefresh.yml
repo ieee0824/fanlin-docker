@@ -1,11 +1,15 @@
 version: '1.0'
 
 steps:
-    unit-tests:
-        image: verchol/node-tools:all
+    build-fanlin:
+        description: "build fanlin"
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
-            - ls
-            - pwd
             - sh scripts/build.sh
+    build-image:
+        type: "build"
+        fail-fast: false
+        dockerfile: "Dockerfile"
+        image-name: "ieee0824/fanlin"
+        tag: "latest"
