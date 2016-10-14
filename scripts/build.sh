@@ -5,14 +5,14 @@ HASH=$(git rev-parse --verify HEAD)
 BUILDDATE=$(date '+%Y/%m/%d %H:%M:%S %Z')
 GOVERSION=$(go version)
 
-git clone https://github.com/wfarr/goenv.git $(pwd)/.goenv 
-export PATH=$(pwd)/.goenv/bin:$PATH
+git clone https://github.com/wfarr/goenv.git $HOME/.goenv 
+export PATH=$HOME/.goenv/bin:$PATH
 eval "$(goenv init -)"
 
 goenv install 1.7.1
 goenv global 1.7.1
 
-mkdir -p $(pwd)/go
+mkdir -p $HOME/go
 
 go get -v github.com/livesense-inc/fanlin/cmd/fanlin
 
