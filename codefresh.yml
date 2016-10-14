@@ -2,7 +2,7 @@ version: '1.0'
 
 steps:
     build-fanlin:
-        image: ieee0824/fanlin-build:all
+        image: ubuntu:latest
         description: "build fanlin"
         fail-fast: false
         working-directory : ${{initial-clone}}
