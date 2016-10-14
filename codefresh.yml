@@ -7,4 +7,5 @@ steps:
         working-directory : ${{initial-clone}}
         commands:
             - ls
-            - sh scripts/build.sh
+            - pwd
+              #- sh scripts/build.sh
