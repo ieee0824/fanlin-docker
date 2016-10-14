@@ -14,6 +14,8 @@ goenv global 1.7.1
 
 mkdir -p $HOME/go
 
+export GOPATH=$HOME/go
+
 go get -v github.com/livesense-inc/fanlin/cmd/fanlin
 
 GOOS=linux GOARCH=amd64 go build -ldflags "-X \"main.buildVersion=${FANLIN_VERSION}\" -X \"main.buildDate=${BUILDDATE}\" -X \"main.goversion=${GOVERSION}\"" github.com/livesense-inc/fanlin/cmd/fanlin
