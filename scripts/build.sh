@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+apt-get install -y build-essential
+
 git clone https://github.com/wfarr/goenv.git $HOME/.goenv 
 export PATH=$HOME/.goenv/bin:$PATH
 eval "$(goenv init -)"
