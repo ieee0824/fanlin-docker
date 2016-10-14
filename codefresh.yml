@@ -2,7 +2,7 @@ version: '1.0'
 
 steps:
     build-fanlin:
-        image: ubuntu:latest
+        image: verchol/node-tools:all
         description: "build fanlin"
         fail-fast: false
         working-directory : ${{initial-clone}}
