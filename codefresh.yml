@@ -3,6 +3,7 @@ version: '1.0'
 steps:
     build-fanlin:
         description: "build fanlin"
+        image: alpine:latest
         fail-fast: false
         working-directory : ${{initial-clone}}
         commands:
